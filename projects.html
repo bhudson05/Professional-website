@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+  <style>
+    .dark-mode {
+      background: #111;
+      color: #eee
+    }
+    .dark-mode nav, .dark-mode footer {
+      background #000;
+    }
+  </style> 
+  <meta charset="UTF-8"/>
+  <title>Brian Hudson | Cloud DevSecOps Engineer | Cloud Operations and Support | Cloud Administrator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background: #333;
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 1em;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 2em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Brian K. Hudson</h1>
+    <nav>
+      <button onclick="toggleDarkMode()" style="margin-left: 20px; padding: 5px;">Toggle Dark Mode</button>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+<h2>Featured Projects</h2>
+    <ul>
+      <li><strong>DevOps Cloud Engineer - CI/CD pipelines with Jenkins, Cloudbees CI, and Ansible:</strong> Automated EBS provisioning and deployments on Oracle Cloud Infrastructure.</li>
+      <li><strong>Cloud Administrator II - AWS Infrastructure Automation:</strong>Built service catalogs and CloudFormation templates to automate provisioning of IAM policies, S3 buckets, EC2 instances, CloudWatch alerts, and other AWS services via GitLab CI/CD.</li>
+      <li><strong>Software Integrator/System Administrator - Security, Compliance, and Automation:</strong>Full enclave automation of current environments out in the field. Automate builds of domain controllers, mail servers, RHEL servers (ansible, splunk, acas, and GOTS applications), NIST compliance rules, and STIG compliance.</li>
+      <li><strong>AWS Systems Administrator</strong>System administrator for Jira, Confluence, and Crowd in AWS. Backend administrator consisting of but not limited to patching, bugs, upgrade, and support.</li>
+    </ul>
