@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+  <style>
+    .dark-mode {
+      background: #111;
+      color: #eee
+    }
+    .dark-mode nav, .dark-mode footer {
+      background #000;
+    }
+  </style> 
   <meta charset="UTF-8">
   <title>Brian Hudson | Cloud DevSecOps Engineer | Cloud Operations and Support | Cloud Administrator</title>
   <meta name="viewport" content="width=deivce-width, initial-scale=1.0">
@@ -69,6 +83,7 @@
   </header>
 
   <nav>
+    <button onclick="toggleDarkMode()" style="margin-left: 20px; padding: 5px;">Toggle Dark Mode</button>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#resume">Resume</a>
