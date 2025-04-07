@@ -1,64 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
-    }
-  </script>
-  <style>
-    .dark-mode {
-      background: #111;
-      color: #eee
-    }
-    .dark-mode nav, .dark-mode footer {
-      background #000;
-    }
-  </style> 
   <meta charset="UTF-8"/>
-  <title>Brian Hudson | Cloud DevSecOps Engineer | Cloud Operations and Support | Cloud Administrator</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    header, footer {
-      background: #333;
-      color: #fff;
-      padding: 1em;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 1em;
-      text-decoration: none;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    main {
-      padding: 2em;
-    }
-  </style>
+  <title>Home - Brian K Hudson | Cloud DevSecOps Engineer | Cloud Operations and Support | Cloud Administrator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Shared Header -->
   <header>
-    <h1>Brian K. Hudson</h1>
+    <h1>Brian K Hudson</h1>
     <nav>
-      <button onclick="toggleDarkMode()" style="margin-left: 20px; padding: 5px;">Toggle Dark Mode</button>
+      <button id="darkModeToggle">Toggle Dark Mode</button>
       <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
       <a href="resume.html">Resume</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
+  
   <main>
-    <p>Welcome! My name is Brian Hudson. My experience is in building secure, automated cloud infrastructure using AWS, Azure, Google Cloud Platform, Oracle Cloud , Jenkins, Ansible, and Terraform. I bring a strong focus on DevSecOps principles, scalability, and clean automation. Working in the public sector for 7+ years has pushed me to ensure that whether I'm working as a System Administrator, DevSecOps, Cloud Administrator, or Engineer everything starts and ends with security.</p>
+    <h2>Welcome</h2>
+    <p>My name is Brian Hudson. My experience is in building secure, automated cloud infrastructure using AWS, Azure, Google Cloud Platform, Oracle Cloud , Jenkins, Ansible, and Terraform. I bring a strong focus on DevSecOps principles, scalability, and clean automation. Working in the public sector for 7+ years has pushed me to ensure that whether I'm working as a System Administrator, DevSecOps, Cloud Administrator, or Engineer everything starts and ends with security.</p>
   </main>
+
+  <!-- Shared Footer -->
   <footer>
     <p>&copy; 2025 Brian K Hudson</p>
   </footer>
+  <script>
+    const toggle = document.getElementById('darkModeToggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    });
+
+    window.onload = () => {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark');
+      }
+    };
+  </script>
 </body>
 </html>
